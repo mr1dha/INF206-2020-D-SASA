@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
 
   <!-- Icons -->
-  <link href="{{url('assets/vendor/nucleo/css/nucleo-icons.css')}}" rel="stylesheet">
+  <link href="{{url('assets/css/nucleo-icons.css')}}" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
   <!-- Argon CSS -->
@@ -28,7 +28,7 @@
   <!-- Core -->
   <script src="{{url('assets/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{url('assets/vendor/popper/popper.min.js')}}"></script>
-  <script src="{{url('assets/vendor/bootstrap/bootstrap.min.js')}}"></script>
+  <script src="{{url('assets/scss/argon-design-system/vendor/bootstrap/bootstrap.min.js')}}"></script>
 
   <!-- Optional plugins -->
   <script src="{{url('assets/vendor/PLUGIN_FOLDER/PLUGIN_SCRIPT.js')}}"></script>

@@ -1,0 +1,43 @@
+@media (max-width: 720px){
+	.kolom-1{
+		order: 2;
+		margin-top: 0px;
+	}
+	.kolom-2{
+		order: 1;
+	}
+}
+
+.kolom-1{
+	margin-top: -20px;
+}
+
+.kolom-2 img{
+	width: 500px;
+}
+
+.kolom-2 p{
+	font-size: 2rem;
+	margin-top: 0px;
+	text-align: center;
+}
+
+.container{
+	margin-top: 7rem;
+}
+
+.form-group{
+	border: 1px solid #2dce89;
+}
+
+.form-group i{
+	color: #2dce89;
+}
+
+.kolom-2 span{
+	font-weight: 600;
+}
+
+form button{
+	width: 100%;
+}
