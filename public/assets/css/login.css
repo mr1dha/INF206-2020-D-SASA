@@ -1,0 +1,91 @@
+@media (max-width: 720px){
+  .kolom-1{
+    display: none; 
+  }
+  div.kolom-2{
+   justify-content: center;
+  }
+
+  div.baris{
+    margin-top: 9rem;
+  }
+
+  .login-form{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  .navbar-brand{
+    text-align: center;
+    margin: 0px auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.wave{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.login-form{
+  text-align: center;
+  width: 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+a{
+  color: #2dce89;
+}
+
+.login-form .form-control,.login-form .input-group-text{
+  border-bottom: 3px solid  #2dce89;
+  background-color: #fafafa;
+  padding-top: 15px;
+}
+
+.login-form  button {
+  border-radius: 25px;
+  padding-top: 15px;
+}
+
+.wave-container{
+  position: absolute;
+  bottom: : 0px;
+}
+.image{
+  width: 500px;
+  margin-top: 7rem
+}
+
+.baris{
+  margin-top: 6rem;
+}
+.kolom-2{
+    display: flex;
+    justify-content: right;
+}
+.welcome-text{
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  margin-bottom: 1rem;
+}
+
+a.navbar-brand{
+  font-size: 1.5rem;
+}
+
+nav.navbar{
+  background-color: transparent;
+  color: black;
+}

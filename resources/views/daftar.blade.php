@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container" id="container-daftar">
 	<div class="row">
 		<div class="col-lg-5 kolom-1">
 			<p class="display-4"><i class="ni ni-single-copy-04"></i> Registrasi akun SASA<p>
@@ -17,15 +17,15 @@
 		          <div class="input-group-prepend">
 		            <span class="input-group-text"><i class="ni ni-credit-card"></i></span>
 		          </div>
-		          <input class="form-control form-control-alternative" placeholder="Nama lengkap" type="text" name="nama">
+		          <input class="form-control form-control-alternative" placeholder="Nama lengkap" type="text" name="nama" required>
 		        </div>
 		      </div>
 		       <div class="custom-control custom-radio d-inline mx-2 ">
-		       		<input type="radio" class="custom-control-input" name="jk" id="custom-radio">
+		       		<input type="radio" class="custom-control-input" name="jk" id="custom-radio" required>
 		       		<label for="custom-radio" class="custom-control-label">Laki-laki</label>
 		       </div>
 		       <div class="custom-control custom-radio d-inline">
-		       		<input type="radio" class="custom-control-input" name="jk" id="custom-radio-2">
+		       		<input type="radio" class="custom-control-input" name="jk" id="custom-radio-2" required>
 		       		<label for="custom-radio-2" class="custom-control-label">Perempuan</label>
 		       </div>
 		       <div class="form-group shadow mt-3">
@@ -33,7 +33,7 @@
 		          <div class="input-group-prepend">
 		            <span class="input-group-text"><i class="ni ni-single-02"></i></span>
 		          </div>
-		          <input class="form-control form-control-alternative" placeholder="Buat Username" type="text" name="username">
+		          <input class="form-control form-control-alternative" placeholder="Buat Username" type="text" name="username" required>
 		        </div>
 		      </div>
 		      <div class="form-group shadow mt-3">
@@ -41,7 +41,7 @@
 		          <div class="input-group-prepend">
 		            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
 		          </div>
-		          <input class="form-control form-control-alternative" placeholder="Buat Password" type="text" name="password">
+		          <input class="form-control form-control-alternative" placeholder="Buat Password" type="text" name="password" required>
 		        </div>
 		      </div>
 		      <div class="form-group shadow mt-3">
@@ -49,7 +49,7 @@
 		          <div class="input-group-prepend">
 		            <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
 		          </div>
-		          <input class="form-control form-control-alternative" placeholder="Nomor Hp" type="text" name="nomor_hp">
+		          <input class="form-control form-control-alternative" placeholder="Nomor Hp" type="text" name="nomor_hp" required>
 		        </div>
 		      </div>
 		      <div class="form-group shadow mt-3">
@@ -57,11 +57,11 @@
 		          <div class="input-group-prepend">
 		            <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
 		          </div>
-		          <textarea class="form-control form-control-alternative" placeholder="Alamat Lengkap" type="text" name="alamat"></textarea>
+		          <textarea class="form-control form-control-alternative" placeholder="Alamat Lengkap" type="text" name="alamat" required></textarea>
 		        </div>
 		      </div>
 		      <div class="form-group">
-				<select class="form-control" name="daftar-sebagai">
+				<select class="form-control" name="daftar-sebagai" required>
 					<option value="none">Daftar Sebagai</option>
 					<option value="Pembeli">1. Pembeli</option>
 					<option value="Penjual">2. Penjual</option>
@@ -69,7 +69,7 @@
 			</div>
 		      <button class="btn btn-success" type="submit" name="submit">DAFTAR</button>
 			</form>
-			<small class="text-muted">Sudah punya akun? Login <a href="#">di sini</a></small>
+			<small class="text-muted">Sudah punya akun? Login <a href="{{url('/login')}}">di sini</a></small>
 			</div>
 		<div class="col-lg-7 kolom-2">
 			<img src="{{url('assets/pic/daftar.png')}}" alt="gambar-daftar" class="img-fluid">

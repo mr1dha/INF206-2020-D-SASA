@@ -13,4 +13,8 @@ class PageController extends Controller
     public function daftar(){
     	return view('daftar');
     }
+
+    public function login(){
+    	return view('login');
+    }
 }
