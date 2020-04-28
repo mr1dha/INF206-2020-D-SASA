@@ -4,6 +4,8 @@
 
 @section('style')
   <link rel="stylesheet" href="{{url('assets/css/index.css')}}">
+  <link rel="stylesheet" href="{{url('assets/css/produk.css')}}">
+
 @endsection
 	<div class="wave-container">
 		<h1>Selamat Datang <br><span class="font-weight-bold">Ridha</span></h1>
@@ -12,8 +14,26 @@
     </div>
 
     <div class="container">
+     <h4 class="text-center font-weight-bold mb-4">
+      <i class="ni ni-bullet-list-67" style="color: grey; font-size: 21px;"></i> SAYUR TERBARU</h4>
+      <!-- <hr class=" garis"> -->
     	<div class="row">
-    		
+        <a href="">
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="card border-0 shadow">
+              <img src="{{url('assets/pic/sayur/bayam.jpg')}}" alt="" class="card-img-top">
+              <div class="card-body">
+               <p class="card-title font-weight-bold  my-0">Bayam Lezat</p>
+               <small class="text-muted mr-1"><i class="ni ni-pin-3"></i> Pasar Peunayong</small>
+               <small class="text-warning d-inline-block"><i class="ni ni-tag"></i> Tidak segar </small>
+                <div class="d-block mt-1">
+                <button class="btn btn-primary d-inline">Rp 5,000</button>
+                <button class="btn btn-success d-inline">Beli</button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     	</div>
     </div>
 @section('content')

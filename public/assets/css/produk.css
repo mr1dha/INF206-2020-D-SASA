@@ -1,0 +1,33 @@
+.card{
+	border-radius: 15px;
+}
+
+.card-img-top{
+	border-radius: 15px;
+	height: 175px;
+	object-fit: cover;object-position: center;
+}
+
+.card-body{
+	padding: 10px 15px;
+}
+
+.card .btn{
+	/*display: inline-block;*/
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+
+.price{
+	font-size: 18px;
+	color: #4bb543;
+	margin-bottom: 0px;	
+}
+.place{
+	color: grey;
+}
+
+.fresh-tag{
+	top: 30px;
+	left: 30px;
+}

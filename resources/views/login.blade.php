@@ -47,8 +47,3 @@
 		</div>
 		<!-- End Login Form -->
 @endsection
-
-<script>
-	let nav = document.querySelector('nav.navbar');
-	Console.Log(nav.classList());
-</script>
