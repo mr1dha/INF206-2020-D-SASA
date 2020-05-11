@@ -1,0 +1,33 @@
+@media (max-width: 720px){
+	
+}
+
+/* body {
+    background-image:url('assets/pic/wave-min.png');
+} */
+
+#container-tambah{
+    margin-top: 7rem;
+   
+}
+
+center{
+    font-size:20px;
+}
+.form-group{
+	border: 1px solid #2dce89;
+}
+
+.form-group i{
+    color: #2dce89;
+    font-family: system-ui, sans-serif;
+}
+
+.btn-primary{
+    background-color: #2dce89;
+}
+
+.card-header{
+    color:white;
+    background-color: #2dce89;
+}
