@@ -19,3 +19,7 @@ Route::get('/login', 'PageController@login');
 
 Route::resource('sayur','SayurController');
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
