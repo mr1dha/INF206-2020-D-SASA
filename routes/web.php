@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PageController@index');
 Route::get('/daftar', 'PageController@daftar');
 Route::get('/login', 'PageController@login');
+Route::get('/tampilan', 'PageController@tampilan');
 
 Route::resource('sayur','SayurController');
 
