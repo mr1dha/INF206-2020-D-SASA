@@ -10,7 +10,7 @@
 <div class="container" id="container-daftar">
   <div class="row">
     <div class="col-lg-5 kolom-1">
-      <p class="display-4"><i class="ni ni-single-copy-04"></i> Registrasi akun SASA<p>
+      <p class="display-4"><i class="ni ni-single-copy-04"></i> Registrasi User Baru SASA<p>
       <form method="POST" action="{{ route('register') }}">
         @csrf
         <div class="form-group shadow">
