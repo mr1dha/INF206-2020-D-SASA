@@ -15,7 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@index');
 Route::get('/daftar', 'PageController@daftar');
-Route::get('/login', 'PageController@login');
 
 Route::resource('sayur','SayurController');
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('penjual/login', 'Auth\PenjualAuthController@getLogin')->name('penjual.login');
+Route::post('penjual/login', 'Auth\PenjualAuthController@postLogin');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
