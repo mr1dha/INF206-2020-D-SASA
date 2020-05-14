@@ -20,7 +20,7 @@
                 <div class="col-lg kolom-2">
                     <div class="login-form border-0">
                         <img src="{{url('assets/pic/icon.png')}}" alt="icon" width="150px">
-                        <p class="welcome-text">sasa</p>
+                        <p class="welcome-text">sasa | Penjual</p>
 
                         <form action="" method="post">
                         @csrf
