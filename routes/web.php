@@ -14,17 +14,23 @@ use Illuminate\Support\Facades\Route;
 */	
 
 Route::get('/', 'PageController@index');
-Route::get('/daftar', 'PageController@daftar');
 
-Route::resource('sayur','SayurController');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
+// Route Autentikasi Penjual
 Route::get('penjual/login', 'Auth\PenjualAuthController@getLogin')->name('penjual.login');
+Route::get('penjual/daftar', 'Auth\PenjualAuthController@getDaftar')->name('penjual.daftar');
+Route::post('penjual/logout', 'Auth\PenjualAuthController@postLogout')->name('penjual.logout');;
 Route::post('penjual/login', 'Auth\PenjualAuthController@postLogin');
+Route::post('penjual/daftar', 'Auth\PenjualAuthController@postDaftar');
 
+// Route Autentikasi Pembeli
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route Aktifitas Penjual
+Route::resource('sayur','SayurController');
+Route::get('penjual/dashboard', 'PenjualController@dashboard');
+
+// Route Aktifitas Pembeli
+Route::get('pembeli/dashboard', 'PembeliController@dashboard');
+
+
+// Route::get('/home', 'HomeController@dashboard')->name('home');

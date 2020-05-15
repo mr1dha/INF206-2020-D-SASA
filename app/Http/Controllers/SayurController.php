@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class SayurController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:penjual');
+    }
+
     /**
      * Display a listing of the resource.
      *

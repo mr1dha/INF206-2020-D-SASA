@@ -62,13 +62,14 @@ class Handler extends ExceptionHandler
         }
 
         $guard = Arr::get($exception->guards(), 0);
-
+        
         $route = 'login';
 
         if ($guard == 'penjual') {
             $route = 'penjual.login';
         }
 
+        
         return redirect()->route($route);
     }
 }

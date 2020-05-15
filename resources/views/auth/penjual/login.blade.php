@@ -32,7 +32,7 @@
                                   </div>
                                   <input class="form-control form-control-alternative" placeholder="E-Mail" type="text" name="email">
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="text-danger" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -47,7 +47,7 @@
                                   <input class="form-control form-control-alternative" placeholder="Password" type="password" name="password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="text-danger" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -69,7 +69,7 @@
                               <button type="submit" class="btn btn-success w-100 mb-2">Masuk</button>
                         </form>
                         
-                        <smal class="text-muted">Belum punya akun? daftar <a href="{{url('/daftar')}}">di sini</a></smal>       
+                        <smal class="text-muted">Belum punya akun? daftar <a href="{{url('/penjual/daftar')}}">di sini</a></smal>       
                     </div>
                 </div>
             </div>

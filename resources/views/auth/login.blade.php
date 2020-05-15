@@ -70,7 +70,7 @@
                               <button type="submit" class="btn btn-success w-100 mb-2">Masuk</button>
                         </form>
                         
-                        <smal class="text-muted">Belum punya akun? daftar <a href="{{url('/daftar')}}">di sini</a></smal>       
+                        <smal class="text-muted">Belum punya akun? daftar <a href="{{url('/register')}}">di sini</a></smal>       
                     </div>
                 </div>
             </div>
