@@ -16,6 +16,6 @@ class Penjual extends Authenticable
     protected $hidden = ['password'];
 
     public function sayur(){
-    	// $this->hasMany()
+    	$this->hasMany('App\Sayur');
     }
 }

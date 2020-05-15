@@ -8,4 +8,8 @@ class Sayur extends Model
 {
     protected $table = 'sayur';
     protected $guarded = ['id'];
+
+    public function penjual(){
+    	$this->belongsTo('App\Penjual');
+    }
 }
