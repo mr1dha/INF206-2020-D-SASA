@@ -10,6 +10,10 @@ class Sayur extends Model
     protected $guarded = ['id'];
 
     public function penjual(){
-    	$this->belongsTo('App\Penjual');
+    	return $this->belongsTo('App\Penjual', 'penjual_id');
+    }
+
+    public function transaksi(){
+    	return $this->hasMany('App\Transaksi');	 
     }
 }
