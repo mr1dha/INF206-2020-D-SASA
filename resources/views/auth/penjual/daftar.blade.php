@@ -11,6 +11,7 @@
   <div class="row">
     <div class="col-lg-5 kolom-1">
       <p class="display-4"><i class="ni ni-single-copy-04"></i> Registrasi Penjual Baru<p>
+
       <form method="POST" action="">
         @csrf
         <div class="form-group shadow">

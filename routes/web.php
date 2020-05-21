@@ -33,4 +33,4 @@ Route::get('penjual/dashboard', 'PenjualController@dashboard');
 Route::get('pembeli/dashboard', 'PembeliController@dashboard');
 
 
-// Route::get('/home', 'HomeController@dashboard')->name('home');
+// Route::get('/penjual/home', 'HomeController@dashboard')->name('home');

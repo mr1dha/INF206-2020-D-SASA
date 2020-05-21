@@ -41,7 +41,7 @@ class PenjualAuthController extends Controller
 	        if (auth()->guard('penjual')->attempt($request->only('email', 'password'))) {
 	            $request->session()->regenerate();
 	            $this->clearLoginAttempts($request);
-	            return view('penjual.dashboard');
+	            return redirect('/penjual/dashboard');
 	        } else {
 	            // $this->incrementLoginAttempts($request);
 
@@ -54,13 +54,20 @@ class PenjualAuthController extends Controller
 
 	    public function postDaftar(Request $request)
 	    {
-	      $this->validate($request, [
-	            'nama' => ['required', 'string', 'max:255'],
-	            'no_hp' => ['required', 'string', 'max:255'],
-	            'alamat_rumah' => ['required', 'string', 'max:255'],
-	            'email' => ['required', 'string', 'email', 'max:255', 'unique:penjual'],
-	            'password' => ['required', 'string', 'min:8', 'confirmed'],
-	        ]);
+	    	$validator = Validator::make($request->all(), [
+	            'nama' => 'required|string|max:255',
+	            'no_hp' => 'required|string|max:255',
+	            'alamat_pasar' => 'required|string|max:255',
+	            'email' => 'required|string|email|max:255|unique:penjual',
+	            'password' => 'required|string|min:8|confirmed',
+	    	]);
+
+	    	if($validator->fails()){
+	            return redirect()
+	                ->back()
+	                ->withInput()
+	                ->withErrors($validator);
+	    	}
 
 	       Penjual::create([
 	            'nama' => $request->nama,
@@ -70,11 +77,8 @@ class PenjualAuthController extends Controller
 	            'password' => Hash::make($request->password)
         	]);
 
-	            return redirect()
-	                ->back()
-	                ->withInput()
-	                ->withErrors(["Incorrect user login details!"]);
-	        }
+	       return redirect('penjual/login');
+	   }
 
 	    public function postLogout()
 	    {
