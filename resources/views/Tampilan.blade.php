@@ -6,7 +6,10 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+<<<<<<< HEAD
       <h1>.............</h1>
+=======
+>>>>>>> 1808107010047
       <h1>Wortel Paling Enak</h1>
       <div class="row">
         <div class="col-6 col-sm-6">
