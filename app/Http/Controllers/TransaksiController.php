@@ -2,17 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Sayur;
+use App\Transaksi;
 use Illuminate\Http\Request;
 
-class SayurController extends Controller
+class TransaksiController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth:penjual');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -47,10 +41,10 @@ class SayurController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Sayur  $sayur
+     * @param  \App\Transaksi  $transaksi
      * @return \Illuminate\Http\Response
      */
-    public function show(Sayur $sayur)
+    public function show(Transaksi $transaksi)
     {
         //
     }
@@ -58,10 +52,10 @@ class SayurController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Sayur  $sayur
+     * @param  \App\Transaksi  $transaksi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sayur $sayur)
+    public function edit(Transaksi $transaksi)
     {
         //
     }
@@ -70,10 +64,10 @@ class SayurController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Sayur  $sayur
+     * @param  \App\Transaksi  $transaksi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sayur $sayur)
+    public function update(Request $request, Transaksi $transaksi)
     {
         //
     }
@@ -81,10 +75,10 @@ class SayurController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Sayur  $sayur
+     * @param  \App\Transaksi  $transaksi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sayur $sayur)
+    public function destroy(Transaksi $transaksi)
     {
         //
     }
