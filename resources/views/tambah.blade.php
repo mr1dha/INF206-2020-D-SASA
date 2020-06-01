@@ -1,3 +1,5 @@
+<!-- AKSES HALAMAN INI PADA ROUTE : "http://localhost:8000/sayur/create" -->
+
 @extends('layout.master')
 
 @section('title', 'SASA |Tambah')
@@ -32,13 +34,14 @@ body{
                    </ul>
              </div><br />
           @endif
-      <form method="post">
+      <form method="post" action="{{url('/sayur')}}" enctype="multipart/form-data">
+      
           <div class="form-group">
-              <input type="text" placeholder="Nama Sayur" class="form-control"/>
+              <input type="text" placeholder="Nama Sayur" class="form-control" name="nama" required>
             </div>
             <div class="form-group">
             @csrf
-              <select name="freshstate" class="form-control">
+              <select name="fresh_state" class="form-control" required>
                 <option value="">Fresh State</option>
                 <option value="10%">10%</option>
                 <option value="20%">20%</option>
@@ -53,12 +56,14 @@ body{
               </select>
           </div>
           <div class="form-group">
-              <input type="text" class="form-control" placeholder="Harga"/>
+              <input type="number" class="form-control" placeholder="Harga" name="harga" required>
           </div>
-        
+
           <div class="form-group">
-              <input type="file" class="form-control" accepted="image/*" placeholder="Masukkan Gambar"/>
+              <input type="file" class="form-control" placeholder="Masukkan Gambar" name="gambar" required>
           </div>
+
+          <input type="hidden" name="penjual_id" value="{{Auth::user()->id}}" required>
           <button type="submit" class="btn btn-primary">Tambah Sayur</button>
       </form>
   </div>
