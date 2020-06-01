@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@index');
 
+Route::get('/daftar', 'PageController@daftar');
+Route::get('/login', 'PageController@login');
+Route::get('/tampilan', 'PageController@tampilan');
+
+
 // Route Autentikasi Penjual
 Route::get('penjual/login', 'Auth\PenjualAuthController@getLogin')->name('penjual.login');
 Route::get('penjual/daftar', 'Auth\PenjualAuthController@getDaftar')->name('penjual.daftar');
