@@ -16,7 +16,11 @@ class PembeliController extends Controller
     }
 
     public function dashboard(){
-    	return view('pembeli.dashboard');
+      return view('pembeli.dashboard');
+    }   
+
+    public function cart(){
+      return view('pembeli.shop');
     }    
 
 }
