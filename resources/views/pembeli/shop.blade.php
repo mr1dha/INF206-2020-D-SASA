@@ -60,31 +60,22 @@
                 </div>
             </div>
             <aside>
-                <div class="summary mt-4">
-                    <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+                <div class="summary mt-4 bg-gradient-success">
+                    <div class="summary-total-items text-white"><span class="total-items"></span> Items in your Bag</div>
                     <div class="summary-subtotal">
-                        <div class="subtotal-title">Total</div>
-                        <div class="subtotal-value final-value" id="basket-subtotal">130.000</div>
+                        <div class="subtotal-title text-white">Total</div>
+                        <div class="subtotal-value final-value text-white" id="basket-subtotal">130.000</div>
                         <div class="summary-promo hide">
-                            <div class="promo-title">Promotion</div>
+                            <div class="promo-title text-white">Promotion</div>
                             <div class="promo-value final-value" id="basket-promo"></div>
                         </div>
                     </div>
-                    <div class="summary-delivery">
-                        <select name="delivery-collection" class="summary-delivery-selection">
-                            <option value="0" selected="selected">Metode Antar</option>
-                            <option value="collection">JNE</option>
-                            <option value="first-class">Tiki</option>
-                            <option value="second-class">Super Fast JNE</option>
-                            <option value="signed-for">Super Fast Tiki</option>
-                        </select>
-                    </div>
                     <div class="summary-total">
-                        <div class="total-title">Total</div>
-                        <div class="total-value final-value" id="basket-total">58.000</div>
+                        <div class="total-title text-white">Total</div>
+                        <div class="total-value final-value text-white" id="basket-total">58.000</div>
                     </div>
                     <div class="summary-checkout">
-                        <button class="checkout-cta">Bayar</button>
+                        <button class="checkout-cta text-white">Bayar</button>
                     </div>
                 </div>
             </aside>

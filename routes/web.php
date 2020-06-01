@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@index');
 
+
 // Route Autentikasi Penjual
 Route::get('penjual/login', 'Auth\PenjualAuthController@getLogin')->name('penjual.login');
 Route::get('penjual/daftar', 'Auth\PenjualAuthController@getDaftar')->name('penjual.daftar');
@@ -32,5 +33,6 @@ Route::get('penjual/dashboard', 'PenjualController@dashboard');
 // Route Aktifitas Pembeli
 Route::get('pembeli/dashboard', 'PembeliController@dashboard');
 Route::get('pembeli/cart', 'PembeliController@cart');
+Route::get('/produk', 'PageController@tampilan');
 
 // Route::get('/penjual/home', 'HomeController@dashboard')->name('home');
