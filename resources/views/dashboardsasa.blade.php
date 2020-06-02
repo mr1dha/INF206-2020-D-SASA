@@ -118,16 +118,14 @@
                         <ul>
                             <li class="active"><a href="./index.html">Home</a></li>
                             <li><a href="./shop-grid.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
+                            <li><a href="#">Halaman</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                                    <li><a href="./shop-details.html">Detail Pembelanjaan</a></li>
+                                    <li><a href="./shoping-cart.html">Keranjang Belanja</a></li>
                                     <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./contact.html">Kontak</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -136,7 +134,7 @@
                         <ul>
                             <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+                        <div class="header__cart__price">Belanjaan: <span>RP.50.000</span></div>
                     </div>
                 </div>
             </div>
@@ -172,11 +170,10 @@
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
-                                    All Categories
-                                    <span class="arrow_carrot-down"></span>
+                                    Pencarian
                                 </div>
-                                <input type="text" placeholder="What do yo u need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
+                                <input type="text" placeholder="Apa yang kamu butuhkan?">
+                                <button type="submit" class="site-btn">Cari</button>
                             </form>
                         </div>
                         <div class="hero__search__phone">
