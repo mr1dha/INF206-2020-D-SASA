@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Sayur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Auth;
 
 class SayurController extends Controller
 {
 
     public function __construct()
     {
-        $this->middleware('auth:penjual');
+        $this->middleware('auth', ['only'=> 'show']);
+        $this->middleware('auth:penjual')->except('show');
     }
 
     /**
@@ -21,7 +23,8 @@ class SayurController extends Controller
      */
     public function index()
     {
-        //
+        $sayur = Sayur::orderBy('id', 'desc')->where('penjual_id', Auth::user()->id)->paginate(7);
+        return view('penjual.sayur-index', compact('sayur'));
     }
 
     /**
@@ -31,7 +34,8 @@ class SayurController extends Controller
      */
     public function create()
     {
-        return view('penjual.tambah');
+        $kategori = Sayur::orderBy('kategori', 'asc')->select('kategori')->distinct()->get();
+        return view('penjual.tambah', compact('kategori'));
     }
 
     /**
@@ -48,14 +52,15 @@ class SayurController extends Controller
         $file->move($folder_tujuan, $nama_file);
 
         Sayur::create([
-                'penjual_id' => $request->penjual_id,
-                'nama' => $request->nama,
-                'fresh_state' => $request->fresh_state,
-                'harga' => $request->harga,
-                'gambar' => $nama_file
+            'penjual_id' => $request->penjual_id,
+            'nama' => $request->nama,
+            'fresh_state' => $request->fresh_state,
+            'kategori' => ucfirst($request->kategori),
+            'harga' => $request->harga,
+            'gambar' => $nama_file
         ]);
 
-        return redirect()->back()->with('status', 'Data berhasil ditambahkan');
+        return redirect('/sayur')->with('status', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -66,7 +71,9 @@ class SayurController extends Controller
      */
     public function show(Sayur $sayur)
     {
-        //
+        $rekomendasi = Sayur::orderBy('id', 'desc')->where('kategori', $sayur->kategori)
+        ->where('id', '!=', $sayur->id)->get();
+        return view('pembeli.show', compact('sayur', 'rekomendasi'));
     }
 
     /**
@@ -77,7 +84,8 @@ class SayurController extends Controller
      */
     public function edit(Sayur $sayur)
     {
-        return view('penjual.update', compact('sayur'));
+        $kategori = Sayur::orderBy('kategori', 'asc')->select('kategori')->distinct()->get();
+        return view('penjual.update', compact('sayur', 'kategori'));
     }
 
     /**
@@ -98,18 +106,19 @@ class SayurController extends Controller
 
             if(File::exists($image_path))
                 File::delete($image_path);
-            }
+        }
 
-            Sayur::where('id', $sayur->id)
-            ->update([
-                'penjual_id' => $request->penjual_id,
-                'nama' => $request->nama,
-                'fresh_state' => $request->fresh_state,
-                'harga' => $request->harga,
-                'gambar' => $nama_file
-            ]);
+        Sayur::where('id', $sayur->id)
+        ->update([
+            'penjual_id' => $request->penjual_id,
+            'nama' => $request->nama,
+            'fresh_state' => $request->fresh_state,
+            'kategori' => ucfirst($request->kategori),
+            'harga' => $request->harga,
+            'gambar' => $nama_file
+        ]);
 
-        return redirect()->back()->with('status', 'Data berhasil diedit');
+        return redirect('/sayur')->with('status', 'Data berhasil diedit');
     }
 
     /**
@@ -120,6 +129,11 @@ class SayurController extends Controller
      */
     public function destroy(Sayur $sayur)
     {
-        //
+        $image_path = "img/".$sayur->gambar;
+        if(File::exists($image_path))
+            File::delete($image_path);
+
+        Sayur::destroy($sayur->id);
+        return redirect('/sayur') -> with('status','Data '.$sayur->nama.' berhasil dihapus');
     }
 }

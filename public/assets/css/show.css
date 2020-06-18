@@ -1,0 +1,37 @@
+@media(max-width: 720px){
+	img.gambar{
+		height: 275px !important;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
+.gambar{
+	width: 520px !important;
+	height: 520px !important;
+	object-fit: cover !important;
+	border-radius: 15px;
+}
+
+.nama{
+	font-size: 2.3rem;
+	font-weight: bold;
+}
+
+.harga{
+	font-size: 2rem;
+	color: #2dce89;
+}
+
+.table td{
+	font-size: 1.5rem;
+	padding: 10px !important;
+}
+
+.card .btn{
+	font-size: 1.4rem;
+}
+
+.btn.pesan{
+	border-width: 2px;
+}

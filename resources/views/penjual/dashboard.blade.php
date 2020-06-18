@@ -3,227 +3,206 @@
 @section('title', 'SASA | Dashboard Penjual')
 
 @section('style')
-    <!-- Bootstrap core CSS -->
-    <link href="{{asset('assets/css/dashboard.css')}}" rel="stylesheet">
-    <!-- Add custom CSS here -->
-    <link href="css/sb-admin.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <!-- Page Specific CSS -->
-    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+<!-- Bootstrap core CSS -->
+<link href="{{asset('assets/css/dashboard.css')}}" rel="stylesheet">
+<!-- Add custom CSS here -->
+<link href="css/sb-admin.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
 @endsection
 
 @section('content')
-  <div class="container" id="wrapper">
-      <div id="page-wrapper">
+<div class="container" id="wrapper">
+  <div id="page-wrapper">
 
-        <div class="row">
-          <div class="col-lg-6">
-            <h1 style= "margin-top: 60px;">Dashboard <small>Penjual</small></h1> 
-          </div>
-        </div><!-- /.row -->
+    <div class="row">
+      <div class="col-lg-6">
+        <h1 style= "margin-top: 60px;">Dashboard <small>Penjual</small></h1> 
+      </div>
+    </div><!-- /.row -->
 
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="panel panel-success">
-              <div class="panel-heading">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <i class="fa fa-shopping-basket fa-5x"></i>
-                  </div>
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">456</p>
-                    <p class="announcement-text">Total Sayur!</p>
-                  </div>
-                </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="panel panel-success statistik">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="fa fa-shopping-basket fa-5x"></i>
               </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      Tampilkan semua sayur
-                    </div>
-                    <div class="col-xs-6 text-right">
-                      <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+              <div class="col-xs-6 text-right">
+                <p class="announcement-heading">{{ $statistik['total_sayur'] }}</p>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-success">
-              <div class="panel-heading">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <i class="fa fa-check fa-5x"></i>
-                  </div>
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">12</p>
-                    <p class="announcement-text">Total Pembelian!</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      Lihat pembelian
-                    </div>
-                    <div class="col-xs-6 text-right">
-                      <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-success">
-              <div class="panel-heading">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <i class="fa fa-tasks fa-5x"></i>
-                  </div>
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading"><strong>18</strong></p>
-                    <p class="announcement-text">Dalam proses pembelian!</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      Selesaikan pembelian
-                    </div>
-                    <div class="col-xs-6 text-right">
-                      <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-success">
-              <div class="panel-heading">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <i class="far fa-money-bill-alt fa-5x"></i>
-                  </div>
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">Rp.56.000</p>
-                    <p class="announcement-text">Total keuntungan!</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      Keuntungan bulan ini
-                    </div>
-                    <div class="col-xs-6 text-right">
-                      <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div><!-- /.row -->
-
-       
-
-        <div class="row">
-         
-          <div class="col-lg-6">
-            <div class="panel panel-success">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-clock-o"></i> Aktivitas</h3>
-              </div>
-              <div class="panel-body">
-                <div class="list-group">
-                  <a href="#" class="list-group-item">
-                    <span class="badge">sekarang</span>
-                    <i class="fa fa-cart-arrow-down"></i> Memasukkan 1 sayuran baru
-                  </a>
-                  <a href="#" class="list-group-item">
-                    <span class="badge">4 menit lalu</span>
-                    <i class="fa fa-trash"></i> Menghapus 2 sayuran
-                  </a>
-                  <a href="#" class="list-group-item">
-                    <span class="badge">23 menit lalu</span>
-                    <i class="fa fa-check"></i> Menyelesaikan 3 pembelian
-                  </a>
-                  <a href="#" class="list-group-item">
-                    <span class="badge">46 menit lalu</span>
-                    <i class="fa fa-shopping-bag"></i> Menerima 2 pembelian
-                  </a>
-                  <a href="#" class="list-group-item">
-                    <span class="badge">1 jam lalu</span>
-                    <i class="fa fa-pencil-alt"></i> Mengedit deskripsi sayur
-                  </a>
-                </div>
-                <div class="text-right">
-                  <a href="#">Tampilkan semua aktivitas <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="announcement-text text-right">Total Sayur</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="panel panel-success">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-shopping-cart"></i> Data proses pembelian</h3>
-              </div>
-              <div class="panel-body">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-hover table-striped tablesorter">
-                    <thead>
-                      <tr>
-                        <th>Kode</th>
-                        <th>Nama Sayur</th>
-                        <th>Pembeli</th>
-                        <th>Tanggal order</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>3326</td>
-                        <td>Bayam</td>
-                        <td>Ratu</td>
-                        <td>10/05/2020</td>
-                        <th><span class="badge">on progress</span></th>
-                      </tr>
-                      <tr>
-                        <td>3325</td>
-                        <td>Wortel</td>
-                        <td>Farras</td>
-                        <td>11/04/2020</td>
-                        <th><span class="badge">on progress</span></th>
-                      </tr>
-                      <tr>
-                        <td>3324</td>
-                        <td>Tomat</td>
-                        <td>Azzuhra</td>
-                        <td>12/05/2020</td>
-                        <th><span class="badge">on progress</span></th>
-                      </tr>
-                    </tbody>
-                  </table>
+          <a href="{{route('sayur.index')}}">
+            <div class="panel-footer announcement-bottom">
+              <div class="row">
+                <div class="col-xs-6">
+                  Tampilkan semua sayur
                 </div>
-                <div class="text-right">
-                  <a href="#">Tampilkan semua pembelian <i class="fa fa-arrow-circle-right"></i></a>
+                <div class="col-xs-6 text-right">
+                  <i class="fa fa-arrow-circle-right"></i>
                 </div>
               </div>
             </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="panel panel-success statistik">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="fa fa-check fa-5x"></i>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p class="announcement-heading">{{ $statistik['total_beli'] }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="announcement-text text-right">Total Pembelian</p>
+              </div>
+            </div>
           </div>
-        </div><!-- /.row -->
+          <a href="{{ url('penjual/riwayat') }}">
+            <div class="panel-footer announcement-bottom">
+              <div class="row">
+                <div class="col-xs-6">
+                  Lihat riwayat pembelian
+                </div>
+                <div class="col-xs-6 text-right">
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
 
-      </div><!-- /#page-wrapper -->
 
-    </div><!-- /#wrapper -->
+      <div class="col-lg-3">
+        <div class="panel panel-success statistik">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="fa fa-tasks fa-5x"></i>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p class="announcement-heading">{{ $statistik['total_proses'] }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="announcement-text text-right">Dalam Proses pembelian</p>
+              </div>
+            </div>
+          </div>
+          <a href="{{ url('penjual/proses') }}">
+            <div class="panel-footer announcement-bottom">
+              <div class="row">
+                <div class="col-xs-6">
+                  Lihat Rincian
+                </div>
+                <div class="col-xs-6 text-right">
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3">
+        <div class="panel panel-success statistik">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="far fa-money-bill-alt fa-5x"></i>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p class="announcement-heading h-100 mb-0">@currency($statistik['total_hasil'])</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="announcement-text text-right">Penjualan Bulan ini</p>
+              </div>
+            </div>
+          </div>
+          <a href="{{ url('penjual/hasil') }}">
+            <div class="panel-footer announcement-bottom">
+              <div class="row">
+                <div class="col-xs-6">
+                  Lihat semua pemasukan
+                </div>
+                <div class="col-xs-6 text-right">
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div><!-- /.row -->
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-shopping-cart"></i> Data proses pembelian</h3>
+          </div>
+          <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover table-striped tablesorter">
+                <thead>
+                  <tr>
+                    <th >No</th>
+                    <th >Nama Sayur</th>
+                    <th > Harga</th>
+                    <th > Pembeli</th>
+                    <th > Waktu Order</th>
+                    <th >Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @if($transaksi->isEmpty())
+                  <tr>
+                    <td colspan="6" class="text-center">Belum ada transaksi!</td>
+                  </tr>
+                  @endif
+                  @foreach($transaksi as $i => $item)
+                  <tr>
+                    <td>{{ ++$i }}</td>
+                    <td>{{$item->sayur->nama}}</td>
+                    <td>@currency($item->harga)</td>
+                    <td>{{$item->user->nama}}</td>
+                    <td>{{$item->created_at}}</td>
+                    <th><span class="badge">on progress</span></th>
+                  </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
+            <div class="text-right">
+              <a href="{{ url('penjual/proses') }}">Tampilkan semua pembelian <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.row -->
+
+  </div><!-- /#page-wrapper -->
+
+</div><!-- /#wrapper -->
 
 @endsection
 

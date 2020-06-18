@@ -1,0 +1,20 @@
+1)  Ekstrak File ini
+2) Copy dan paste folder sasa-project' ke folder htdocs XAMPP
+3) Buka XAMPP lalu jalankan Apache dan MySQL
+4) Buka localhost/phpmyadmin
+5) Buat database baru dan beri nama 'sasa' (Jika sudah ada DB dengan nama yang sama, maka hapus dan buat baru)
+6) Jika DB sudah terbuat, klik menu 'IMPORT'
+7) pilih file 'sasa.sql' yang sudah di ekstrak tadi
+8) Scroll ke bawah dan klik 'GO' atau 'Kirim'
+9) buka terminal/CMD lalu arahkan ke folder sasa-project' pada htdocs XAMPP
+10) ketikkan perintah 'php artisan serve'
+11) Buka 'localhost:8000 'di browser
+
+
+AKUN DEMO PENJUAL: 
+email : ridha@gmail.com
+pass : ridha123
+
+AKUN DEMO PEMBELI
+email : ucup@gmail,com
+pass : ucup1234

@@ -1,0 +1,44 @@
+<style>
+  .jumbotron {
+    background-image: url(../pic/ilus1.svg);
+    height: 100vh;
+    /*background-size: cover;*/
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background-image: linear-gradient(to bottom, rgba(45, 206, 137, 1), rgba(45, 206, 204, 0.2));
+}
+.jumbotron .landing {
+    margin-top: 4rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 100 !important;
+}
+.landing .nama {
+    font-size: 5.5rem;
+    font-weight: 650;
+    margin-top: 0px;
+    line-height: 5rem;
+}
+.jumbotron hr {
+    border-color: rgb(45, 206, 137);
+    width: 8rem;
+    border-width: 3px;
+}
+.jumbotron .lead {
+    font-size: 1.7rem;
+}
+.jumbotron .button{
+    border:2px solid white;
+}
+</style>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Transaksi;
 use Illuminate\Http\Request;
+use App\Sayur;
+use Auth;
 
 class TransaksiController extends Controller
 {
@@ -14,8 +16,10 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        //
-    }
+      $kategori = Sayur::orderBy('kategori', 'asc')->select('kategori')->distinct()->get();
+      $transaksi = Transaksi::orderBy('id', 'desc')->where('user_id', Auth::user()->id)->paginate(7);
+      return view('pembeli.keranjang', compact('transaksi', 'kategori'));
+  }
 
     /**
      * Show the form for creating a new resource.
@@ -35,7 +39,14 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Transaksi::create([
+            'sayur_id' => $request->sayur_id,
+            'user_id' => $request->user_id,
+            'penjual_id' => $request->penjual_id,
+            'jumlah'=>$request->jumlah,
+            'harga' => $request->harga
+        ]);
+        return redirect('/transaksi')->with('status', 'Order Sayur Berhasil');
     }
 
     /**

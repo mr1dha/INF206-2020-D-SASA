@@ -30,6 +30,27 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+@media(max-width: 720px){
+	.kategori{
+		display: none;
+	}
+}
+
+.banner-info{
+	background-color: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.banner-info .card-title{
+	font-size: 2rem;
+	font-family: sans-serif;
+}
+
+.banner-info small{
+	font-weight: 2rem;
+}
 html,
 body {
 	height: 100%;
@@ -570,6 +591,11 @@ ol {
 
 .hero.hero-normal .hero__categories {
 	position: relative;
+}
+
+.hero__categories ul{
+	height: 460px !important;
+	overflow-y: scroll;
 }
 
 .hero.hero-normal .hero__categories ul {

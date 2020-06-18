@@ -136,7 +136,7 @@ table {
           box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  /*font-size: 62.5%;*/
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -898,6 +898,10 @@ a.list-group-item-success.active:focus {
   border-color: #3c763d;
 }
 
+.panel.statistik{
+  height: 177px;
+}
+
 .panel {
   margin-bottom: 20px;
   background-color: #fff;
@@ -958,6 +962,11 @@ a.list-group-item-success.active:focus {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+
+.statistik .panel-heading{
+    height: 117px;
+}
+
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
 }
@@ -970,12 +979,24 @@ a.list-group-item-success.active:focus {
 .panel-title > a {
   color: inherit;
 }
+
+.statistik .panel-footer{
+    height: 60px;
+}
+
 .panel-footer {
   padding: 10px 15px;
   background-color: rgba(45,206,137,0.2);
   border-top: 1px solid #fff;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+}
+.announcement-heading{
+ font-size: 1.3rem; 
+}
+
+.announcement-text{
+  font-size: 1rem;
 }
 
 .panel-success {

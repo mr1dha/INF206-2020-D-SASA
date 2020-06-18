@@ -17,6 +17,10 @@ class CreateTransaksiTable extends Migration
             $table->id();
             $table->integer('sayur_id');
             $table->integer('user_id');
+            $table->integer('penjual_id');
+            $table->integer('jumlah');
+            $table->integer('harga');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

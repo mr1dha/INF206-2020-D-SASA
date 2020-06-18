@@ -17,7 +17,8 @@ class CreateSayurTable extends Migration
             $table->id();
             $table->integer('penjual_id');
             $table->string('nama');
-            $table->string('fresh_state');
+            $table->integer('fresh_state');
+            $table->string('kategori');
             $table->integer('harga');
             $table->string('gambar');
             $table->timestamps();

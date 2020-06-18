@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', 'PageController@index');
+Route::get('/', 'PembeliController@dashboard');
 
 
 // Route Autentikasi Penjual
@@ -29,10 +29,18 @@ Auth::routes();
 // Route Aktifitas Penjual
 Route::resource('sayur', 'SayurController');
 Route::get('penjual/dashboard', 'PenjualController@dashboard');
+Route::get('penjual/riwayat', 'PenjualController@riwayat');
+Route::get('penjual/proses', 'PenjualController@proses');
+Route::get('penjual/hasil', 'PenjualController@hasil');
+Route::post('status/{transaksi}', 'PenjualController@status');
 
 // Route Aktifitas Pembeli
 Route::get('pembeli/dashboard', 'PembeliController@dashboard');
 Route::get('pembeli/cart', 'PembeliController@cart');
 Route::get('/produk', 'PageController@tampilan');
+Route::post('/sayur/cari', 'PembeliController@postCari');
+Route::get('/cari/{jenis}/{key}', 'PembeliController@cari');
+Route::post('/transaksi', 'TransaksiController@store');
+Route::get('/transaksi', 'TransaksiController@index');
 
 // Route::get('/penjual/home', 'HomeController@dashboard')->name('home');

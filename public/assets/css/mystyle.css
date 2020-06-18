@@ -2,4 +2,21 @@
 		.navbar{
 			height: 8%;
 		}
+	.menu-kategori{
+		height: 300px;
+		overflow-y: scroll;
+	}
+	.menu-kategori::-webkit-scrollbar{
+		width: 5px;
+	}
+	.menu-kategori::-webkit-scrollbar-thumb{
+		background: #2dce89;
+	}
+}
+
+@media(max-width: 719px){
+	#beli, #jual{
+		background-color: white;
+		border: none;
+	}
 }

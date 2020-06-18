@@ -1,0 +1,13 @@
+#tabel td{
+	padding: 10px 0 10px 10px;
+}
+
+#tabel th, #tabel ul{
+	padding-left: 10px;
+}
+
+#tabel img{
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
